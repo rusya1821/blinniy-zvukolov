@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Блинный Звуколов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gradient-to-br from-orange-100 via-amber-200 to-yellow-300 min-h-screen">
+
+<div class="container mx-auto p-4 max-w-5xl">
+
+    <!-- Шапка -->
+    <div class="flex justify-between items-center bg-white rounded-xl p-4 shadow">
+        <div class="text-xl font-bold">Уровень: <span id="level-name"></span></div>
+        <div class="text-xl font-bold">✔ <span id="score">0</span></div>
+    </div>
+
+    <!-- Игровое поле -->
+    <div id="pancakes" class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6"></div>
+
+</div>
+
+<!-- Стартовый экран -->
+<div id="start-screen" class="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-3xl max-w-md w-full text-center space-y-6">
+        <div class="text-6xl">🥞</div>
+        <h1 class="text-3xl font-bold">Блинный Звуколов</h1>
+        <p>
+            Найди слова, где <b>Е, Ё, Ю, Я</b> дают
+            <span class="text-red-500 font-bold">ДВА ЗВУКА</span>
+        </p>
+        <button id="start-btn"
+                class="w-full bg-orange-500 hover:bg-orange-600 text-white text-xl py-4 rounded-xl">
+            Начать игру
+        </button>
+    </div>
+</div>
+
+<!-- Экран победы -->
+<div id="win-screen" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-3xl max-w-md w-full text-center space-y-6">
+        <div class="text-6xl">🎉</div>
+        <h2 class="text-3xl font-bold">Молодец!</h2>
+        <button id="next-level"
+                class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-xl">
+            Следующий уровень
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
