@@ -1,0 +1,24 @@
+.pancake {
+    background: white;
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.pancake:hover {
+    transform: translateY(-6px);
+}
+
+.pancake.correct {
+    background: #bbf7d0;
+    pointer-events: none;
+}
+
+.pancake.wrong {
+    background: #fecaca;
+    pointer-events: none;
+    opacity: 0.5;
+}
